@@ -82,7 +82,7 @@ function pedidoIf() {
 // pedidoIf()
 console.groupEnd()
 
-console.group("Switch")
+console.groupCollapsed("Switch")
 // opcion con switch ejercicio trimestre del año
 switch (numMes) {
     case 1:
@@ -171,13 +171,13 @@ function pedidoSwitch() {
 // pedidoSwitch()
 console.groupEnd()
 
-console.group("ciclo for")
+console.groupCollapsed("ciclo for")
 for (let i = 0; i <= 10; i++) {
     console.log(`Hola mundo nº${i}`)
 }
 
 // Imprimir las tablas de multiplicar 
-for (let iT = 1; iT < 21; iT++) {
+for (let iT = 1; iT <= 10; iT++) {
     console.groupCollapsed(`Tabla del ${iT}`)
     for (let iM = 1; iM < 11; iM++) {
         console.log(`${iT} x ${iM} = ${iT * iM}`)
@@ -190,11 +190,20 @@ for (let i = 0; i < 1000; i++) {
     console.log("Perdoname no volverá a suceder")
 }
 console.groupEnd()
-console.group("ciclo while")
+console.groupCollapsed("ciclo while")
 let i = 1
 while (i <= 10) {
     console.log(`9 * ${i} = ${9 * i}`)
     i++
 }
+
+let limit = 10
+let counter = 1
+
+while (counter < limit) {
+    console.log(counter);
+    counter++
+    limit = Math.floor(Math.random()*20)+1
+} // ciclo while que nos imprime numeros de forma aleatoria hasta un limite que cambia constantemente
 console.groupEnd()
 console.groupEnd()
