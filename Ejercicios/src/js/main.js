@@ -211,20 +211,42 @@ if (numero18String == numero18String.split("").reverse().join("")) {
 }
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 19")
 // 19. Verifica si una cadena de texto contiene la palabra "JavaScript".
+// Reetido de strings
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 20")
 // 20. Determina si una cadena tiene más de 10 caracteres.
+let cadenaCaracteres = "Esto es una cadena de texto que contiene un numero 2"
+
+if (cadenaCaracteres.length > 10) {
+    console.log(`"${cadenaCaracteres}" tiene más de 10 caracteres`)
+} else {
+    console.log(`"${cadenaCaracteres}" tiene menos de 10 caracteres`)
+}
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 21")
 // 21. Verifica si una cadena de texto está en minúsculas.
+if (cadenaCaracteres === cadenaCaracteres.toLowerCase()) {
+    console.log(`"${cadenaCaracteres}" está en minúsculas`)
+} else {
+    console.log(`"${cadenaCaracteres}" no está en minúsculas`)
+}
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 22")
 // 22. Determina si una cadena de texto contiene al menos un número.
+
+let cadenaCaracteresString = String(cadenaCaracteres)
+let verificadorNums = cadenaCaracteresString.match(/"0123456789"/g)
+console.log(verificadorNums)
+if (verificadorNums.length == true) {
+    console.log(`${cadenaCaracteres} no contiene números`)
+} else {
+    console.log(`${cadenaCaracteres} contiene números`)
+}
 console.groupEnd()
 
 console.group("Ejercicio ")
