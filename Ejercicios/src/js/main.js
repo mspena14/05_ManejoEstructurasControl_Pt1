@@ -3,10 +3,10 @@ console.groupCollapsed("Ejercicios con Condicionales en JavaScript")
 console.group("Ejercicio 1")
 // 1. Verifica si un número es positivo.
 let num1 = 5
-console.log(num1)  
+console.log(num1)
 if (Math.sign(num1) == 1) {
     console.log("Es positivo")
-}  
+}
 console.groupEnd()
 
 console.group("Ejercicio 2")
@@ -20,11 +20,12 @@ console.groupEnd()
 
 console.group("Ejercicio 3")
 // 3. Comprueba si un número es par.
-let num3 = Math.round(Math.random() *100)
+let num3 = Math.round(Math.random() * 100)
 console.log(num3)
 if (num3 % 2 === 0) {
     console.log("Es par")
-} else { console.log("No es par") 
+} else {
+    console.log("No es par")
 }
 console.groupEnd()
 
@@ -35,24 +36,26 @@ console.log(num4)
 
 if (num4 % 2 !== 0) {
     console.log("Es impar")
-} else { console.log("No es impar") 
+} else {
+    console.log("No es impar")
 }
 console.groupEnd()
 
 console.group("Ejercicio 5")
 // 5. Determina si un número es múltiplo de 5.
-let num5 = Math.floor(Math.random() *100)
+let num5 = Math.floor(Math.random() * 100)
 
 if (num5 % 5 === 0) {
     console.log("Es múltiplo de 5")
-} else { console.log("No es múltiplo de 5") 
+} else {
+    console.log("No es múltiplo de 5")
 }
 console.groupEnd()
 
 console.group("Ejercicio 6")
 // 6. Verifica si un número es divisible entre 3.
 // Lo mismo de los puntos anteriores, pero intentemos con otra lógica
-let num6 = Math.floor(Math.random() *100)
+let num6 = Math.floor(Math.random() * 100)
 
 console.log(num6)
 while (num6 % 3 == 0) {
@@ -73,73 +76,139 @@ let num7 = Math.round(Math.random() * (200 - 1)) + 1
 console.log(num7)
 if (num7 > 100) {
     console.log("Es mayor que 100")
-} else { console.log("No es mayor que 100") 
+} else {
+    console.log("No es mayor que 100")
 }
 console.groupEnd()
 
 console.group("Ejercicio 8")
 // 8. Verifica si un número es menor que -50.
-let num8 = Math.floor(Math.random() *(-100 - 0)) + 0
+let num8 = Math.floor(Math.random() * (-100 - 0)) + 0
 console.log(num8)
 
 if (num8 < -50) {
     console.log("Es menor que -50")
-} else { console.log("No es menor que -50") 
+} else {
+    console.log("No es menor que -50")
 }
 console.groupEnd()
 
 console.group("Ejercicio ")
 // 9. Comprueba si un número está en el rango de 20 a 50.
-let num9 = Math.ceil(Math.random() *100)
+let num9 = Math.ceil(Math.random() * 100)
 
 console.log(num9)
-if (num9 >= 20 && num9 <=50) {
+if (num9 >= 20 && num9 <= 50) {
     console.log(`${num9} está entre 20 y 50`)
-} else { console.log(`${num9} no está entre 20 y 50`) 
+} else {
+    console.log(`${num9} no está entre 20 y 50`)
 }
 console.groupEnd()
 
 console.group("Ejercicio 10")
 // 10. Determina si un número es igual a 0.
-let num10 = Math.floor(Math.random() *(-5 - 5)) + 5
+let num10 = Math.floor(Math.random() * (-5 - 5)) + 5
 
 console.log(num10)
 if (num10 == 0) {
     console.log("Es igual a 0")
-} else { console.log("No es igual a 0") 
+} else {
+    console.log("No es igual a 0")
 }
 console.groupEnd()
 
 console.group("Ejercicio 11")
 // 11. Verifica si un número es mayor que -10 y menor que 10.
+let num11 = Math.floor(Math.random() * (20 - -20)) + -20
+
+console.log(num11)
+if (num11 > -10 && num11 < 10) {
+    console.log("Es mayor que -10 y menor que 10")
+} else {
+    console.log("Esta fuera del rando de -10 y 10")
+}
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 12")
 // 12. Determina si un número es un año bisiesto.
+let num12 = Math.floor(Math.random() * (2024 - 1900)) + 1900
+
+console.log(num12)
+if ((num12 % 4 == 0 && num12 % 400 == 0) || (num12 % 4 == 0 && num12 % 100 != 0)) {
+    console.log(`${num12} es bisiesto`)
+} else {
+    console.log(`${num12} no es bisiesto`)
+}
 console.groupEnd()
 
 console.group("Ejercicio ")
 // 13. Verifica si una persona es mayor de edad (mayor o igual a 18 años).
+let num13 = Math.floor(Math.random() * 50)
+
+console.log(num13)
+
+if (num13 >= 18) {
+    console.log("Es mayor de edad")
+} else {
+    console.log("No es mayor de edad")
+}
 console.groupEnd()
 
 console.group("Ejercicio ")
 // 14.
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 15")
 // 15. Verifica si un número es un cuadrado perfecto.
+let num15 = Math.floor(Math.random() * 100)
+
+console.log(num15)
+if (Math.sqrt(num15) % 1 == 0) {
+    console.log(`${num15} es un cuadrado perfecto`)
+} else {
+    console.log(`${num15} no es un cuadrado perfecto`)
+}
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 16")
 // 16. Determina si un número es un número de Fibonacci.
+let num16a = 0
+let num16b = 1
+
+for (let i = 0; i <= 5; i++) {
+    let num16c = num16a + num16b
+    console.log(num16c)
+    num16a = num16b
+    num16b = num16c
+}
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 17")
 // 17. Verifica si un número es una potencia de 2.
+//let num17 = Math.floor(Math.random() * 100)
+let num17 = 30
+
+if ((Math.log2(num17)) % 1 == 0) {
+    console.log(`${num17} es una potencia de 2`)
+} else {
+    console.log(`${num17} no es una potencia de 2`)
+}
 console.groupEnd()
 
-console.group("Ejercicio ")
+console.group("Ejercicio 18")
 // 18. Determina si un número es un palíndromo.
+
+let numero18 = Math.floor(Math.random() * 1000)
+console.log(numero18)
+let numero18String = String(numero18)
+console.log(numero18String)
+console.log(numero18String.split("").reverse().join("")) 
+
+if (numero18String == numero18String.split("").reverse().join("")) {
+    console.log(`${numero18} es un palíndromo`)
+} else { 
+    console.log(`${numero18} no es un palíndromo`)
+}
 console.groupEnd()
 
 console.group("Ejercicio ")
